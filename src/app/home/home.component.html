@@ -1,8 +1,23 @@
 <div class="test">
     <h3>Đây là Component Home</h3>
     <h1>Trái cây</h1>
-    <div *ngFor="let trai of traiCay; let i = index">
-    <li>{{i + 1}}. {{trai}}</li>
-    </div>
+    <table class="table">
+        <tr>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Hạ Giá</th>
+        </tr>
+        <tr *ngFor="let trai of traiCay2; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{ trai.ten }}</td>
+            <td class="right">
+                <span [ngClass]="{'so-am': trai.gia <0}">{{trai.gia}}</span>
+            </td>
+            <td>
+                <span *ngIf="trai.haGia">Đang hạ giá!</span>
+            </td>
+        </tr>
+      </table>
     
 </div>
