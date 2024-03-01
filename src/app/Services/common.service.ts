@@ -10,7 +10,7 @@ export class CommonService {
 
   public binhPhuong(n:number):number{
     return n*n;
-  }
+  } 
   // public getCounter():number{
   //   return this.counter;
   // }
@@ -18,4 +18,7 @@ export class CommonService {
   // public setCounter(n:number):void{
   //   this.counter = n;
   // }
+  public submitData(data:string):void{
+    console.log('gui data len server. Data:',data);
+  }
 }
