@@ -6,9 +6,7 @@ import { Directive, ElementRef, Input } from '@angular/core';
 export class HighLightDirective {
   @Input('appHightLight') appHightLight = 'blue';
 
-  constructor(private el: ElementRef) {
-    
-   }
+  constructor(private el: ElementRef) {}
 
    ngOnInit():void{
     console.log('ngOnInit HighLightDirective', this.appHightLight);

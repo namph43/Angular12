@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HighLightDirective } from '../Directives/high-light.directive';
+import { CommonService } from '../Services/common.service';
 
 @Component({
   selector: 'app-about',
@@ -6,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  public loginName = 'admin';
+  public loginName = 'user';
   public myColor = 'red';
-  constructor(){}
-  ngOnInit(): void {}
+  public counter = 0;
+  public counterBinhphuong=0;
+
+  constructor(private common:CommonService){}
+  ngOnInit(): void {
+    this.counter= this.common.counter;
+    this.counterBinhphuong=this.common.binhPhuong(this.counter);
+    this.common.counter++;
+  }
 }
