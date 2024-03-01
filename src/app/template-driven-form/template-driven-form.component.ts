@@ -13,8 +13,8 @@ export class TemplateDrivenFormComponent implements OnInit {
   ngOnInit(): void {}
 
   public submitForm():void{
-    // console.log('submit form' + this.name);
-    this.common.submitData({name:this.name, age:12});
+    console.log('submit form' + this.name);
+    // this.common.submitData({name:this.name, age:12});
 
   }
 }
